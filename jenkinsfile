@@ -3,6 +3,7 @@ pipeline{
      
     environment{
         
+        nuget = 'C:\\NuGet\\NuGet.exe'
         dotnet='C:\\Program Files\\dotnet'
     }
 
@@ -13,7 +14,14 @@ pipeline{
                git 'https://github.com/Sylvagit/dotnet-sample.git'
             }
         }
+        stage('Restore'){
+            steps{
+                bat 'echo Restore'
+                bat '%nuget% restore SampleWebApplication.sln'
+            }
+        }  
+          
       }
+      
 }
          
-}
