@@ -10,15 +10,10 @@ pipeline{
       {
         stage('checkout'){ 
             steps{
-               git 'https://github.com/Sylvagit/production-ready-apis-sample-2.2.git'
+               git 'https://github.com/Sylvagit/dotnet-sample.git'
             }
         }
-      
-         stage('Restore'){
-             steps{
-                bat 'dotnet restore C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\demo-build\\BoardGamesApi\\BoardGamesApi.csproj'
-                 
-             }
-         }
       }
+}
+         
 }
