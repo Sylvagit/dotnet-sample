@@ -4,7 +4,7 @@ pipeline{
     environment{
         
         nuget = 'C:\\NuGet\\NuGet.exe'
-        dotnet='C:\\Program Files\\dotnet'
+        dotnet='C:\\Program Files\\dotnet\\sdk\\5.0.404\\Sdks'
     }
 
     stages
